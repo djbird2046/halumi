@@ -1,16 +1,41 @@
-# halumi
+# Halumi
 
-An AI Video Generate Tool
+AI video generation desktop workspace built with Flutter.
 
-## Getting Started
+[中文说明](README-zh_CN.md)
 
-This project is a starting point for a Flutter application.
+## Features
+- Multi-provider AI model management (OpenAI Sora 2, Google Veo, Alibaba WanXiang, ByteDance JiMeng, Kwai Kling).
+- Project-based workflow: create, rename, and delete works.
+- Prompt + reference images (single/multi image depending on the model).
+- Model-aware parameter controls: aspect ratio, resolution, duration.
+- Generation progress, status, saved file path, and quick open of output folder.
+- Local settings: language (English/中文), theme (light/dark/system), output directory.
+- Local persistence for projects and settings via Hive.
 
-A few resources to get you started if this is your first Flutter project:
+## Platforms
+- macOS
+- Windows
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Setup
+1. Install Flutter, then run `flutter pub get`.
+2. Start the desktop app:
+   - `flutter run -d macos`
+   - `flutter run -d windows`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Usage
+1. Open `Settings` -> `AI Model` to add a provider config.
+2. Create a project from the sidebar.
+3. Enter a prompt and select reference images if required by the model.
+4. Choose aspect ratio, resolution, duration, then click `Generate`.
+
+## Provider Notes
+- Sora 2: API key; optional base URL; optional model ID.
+- Veo: OAuth token, Project ID, Location/Region; optional Storage URI.
+- WanXiang: API key; optional model ID.
+- JiMeng/Kling: API key + Secret Key; requires at least one reference image.
+- Some providers accept multiple images; the UI enforces limits based on model capability.
+
+## Development
+- `flutter analyze`
+- `flutter test`
