@@ -17,6 +17,7 @@ class HomeView extends StatefulWidget {
     this.enableDragToMove = false,
     this.reserveNativeButtonsSpace = false,
     this.topBarHeight = 48,
+    this.topBarTrailing,
   });
 
   final ProjectRepository projectRepository;
@@ -24,6 +25,7 @@ class HomeView extends StatefulWidget {
   final bool enableDragToMove;
   final bool reserveNativeButtonsSpace;
   final double topBarHeight;
+  final Widget? topBarTrailing;
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -320,6 +322,7 @@ class _HomeViewState extends State<HomeView> {
             showSettingsButton: false,
             showTitle: false,
             height: widget.topBarHeight,
+            trailing: widget.topBarTrailing,
           ),
           Expanded(
             child: LayoutBuilder(

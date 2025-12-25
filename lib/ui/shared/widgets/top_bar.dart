@@ -13,6 +13,8 @@ class TopBar extends StatelessWidget {
     this.showSettingsButton = false,
     this.showTitle = false,
     this.height = 48,
+    this.leading,
+    this.trailing,
   });
 
   final VoidCallback? onSettings;
@@ -22,6 +24,8 @@ class TopBar extends StatelessWidget {
   final bool showSettingsButton;
   final bool showTitle;
   final double height;
+  final Widget? leading;
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +56,11 @@ class TopBar extends StatelessWidget {
         ),
         child: Row(
           children: [
+            if (leading != null)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: leading,
+              ),
             if (reserveNativeButtonsSpace) const SizedBox(width: 72),
             Expanded(
               child: enableDragToMove
@@ -71,6 +80,7 @@ class TopBar extends StatelessWidget {
                   child: Text(l10n.commonSettings),
                 ),
               ),
+            if (trailing != null) trailing!,
           ],
         ),
       ),

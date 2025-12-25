@@ -8,6 +8,7 @@ import '../../core/repositories/project_repository.dart';
 import '../../core/repositories/settings_repository.dart';
 import '../shared/views/home_view.dart';
 import '../theme/app_theme.dart';
+import 'widgets/windows_window_controls.dart';
 
 class HalumiWindowsApp extends StatelessWidget {
   const HalumiWindowsApp({
@@ -45,8 +46,10 @@ class HalumiWindowsApp extends StatelessWidget {
           home: HomeView(
             projectRepository: projectRepository,
             settingsRepository: settingsRepository,
-            enableDragToMove: false,
+            enableDragToMove: true,
             reserveNativeButtonsSpace: false,
+            topBarHeight: 32,
+            topBarTrailing: const WindowsWindowControls(height: 32),
           ),
         );
       },

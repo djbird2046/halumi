@@ -55,9 +55,7 @@ Future<void> _configureWindow() async {
     minimumSize: const Size(900, 620),
     center: true,
     title: 'Halumi',
-    titleBarStyle: Platform.isMacOS
-        ? TitleBarStyle.hidden
-        : TitleBarStyle.normal,
+    titleBarStyle: TitleBarStyle.hidden,
   );
 
   windowManager.waitUntilReadyToShow(windowOptions, () async {
