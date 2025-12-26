@@ -23,6 +23,16 @@
    - `flutter run -d macos`
    - `flutter run -d windows`
 
+## macOS 打包
+1. 构建 macOS release：
+   - `flutter build macos --release`
+2. 应用包路径：
+   - `build/macos/Build/Products/Release/Halumi.app`
+3. 生成 DMG 安装包：
+   - `hdiutil create -volname Halumi -srcfolder build/macos/Build/Products/Release/Halumi.app -ov -format UDZO build/macos/Halumi.dmg`
+
+DMG 输出路径为 `build/macos/Halumi.dmg`。
+
 ## Windows 打包（Inno Setup）
 1. 构建 Windows release：
    - `flutter build windows --release`

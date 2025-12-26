@@ -23,6 +23,16 @@ AI video generation desktop workspace built with Flutter.
    - `flutter run -d macos`
    - `flutter run -d windows`
 
+## macOS Packaging
+1. Build the macOS release:
+   - `flutter build macos --release`
+2. Find the app bundle at:
+   - `build/macos/Build/Products/Release/Halumi.app`
+3. Create a DMG installer:
+   - `hdiutil create -volname Halumi -srcfolder build/macos/Build/Products/Release/Halumi.app -ov -format UDZO build/macos/Halumi.dmg`
+
+The DMG output goes to `build/macos/Halumi.dmg`.
+
 ## Windows Packaging (Inno Setup)
 1. Build the Windows release:
    - `flutter build windows --release`
