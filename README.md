@@ -4,6 +4,8 @@ AI video generation desktop workspace built with Flutter.
 
 [中文说明](README-zh_CN.md)
 
+![Settings](images/settings.png)
+
 ## Features
 - Multi-provider AI model management (OpenAI Sora 2, Google Veo, Alibaba WanXiang, ByteDance JiMeng, Kwai Kling).
 - Project-based workflow: create, rename, and delete works.

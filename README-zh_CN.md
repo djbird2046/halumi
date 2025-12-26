@@ -4,6 +4,8 @@
 
 [English](README.md)
 
+![设置](images/settings.png)
+
 ## 功能
 - 多模型/多提供方管理（OpenAI Sora 2、Google Veo、阿里万相、字节即梦、快手可灵）。
 - 项目化工作流：新建、重命名、删除作品。
