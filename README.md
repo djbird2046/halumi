@@ -23,6 +23,14 @@ AI video generation desktop workspace built with Flutter.
    - `flutter run -d macos`
    - `flutter run -d windows`
 
+## Windows Packaging (Inno Setup)
+1. Build the Windows release:
+   - `flutter build windows --release`
+2. Compile the installer with Inno Setup (ISCC):
+   - `iscc windows/installer/halumi.iss`
+
+The installer output goes to `build/installer`.
+
 ## Usage
 1. Open `Settings` -> `AI Model` to add a provider config.
 2. Create a project from the sidebar.

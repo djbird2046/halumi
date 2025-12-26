@@ -23,6 +23,14 @@
    - `flutter run -d macos`
    - `flutter run -d windows`
 
+## Windows 打包（Inno Setup）
+1. 构建 Windows release：
+   - `flutter build windows --release`
+2. 使用 Inno Setup 的 ISCC 编译安装包：
+   - `iscc windows/installer/halumi.iss`
+
+安装包输出到 `build/installer`。
+
 ## 使用说明
 1. 打开「设置」->「AI 模型」添加配置。
 2. 在侧边栏新建作品。
